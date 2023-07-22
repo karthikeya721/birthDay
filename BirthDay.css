@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(120deg,red,#1F1C18);
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+}
+.title,.card1{
+    text-align: center;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 4s ;
+    transform-style: preserve-3d;
+}
+
+#textWishes,#myName,p{
+    background-image: linear-gradient(120deg,#D8B5FF,#00CDAC,white,#FFDDE1,lawngreen,white,#D8B5FF);
+    background-size: 900px;
+    background-position: 900px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 3s linear infinite;
+    font-size: 4vh;
+    font-family: 'Dancing Script', cursive;
+}
+@keyframes text {
+    from{
+        background-position: 0vw;
+    }
+    to{
+        background-position: 900px;
+    }
+}
+button{
+    width: 300px;
+    height: 2vh;
+    background-image: linear-gradient(90deg,#DC1C13,#F1959B);
+    border: none;
+    outline: none;
+    letter-spacing: .5vh; 
+    font-size: 30px;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 1vh;
+    position: absolute;
+    top: 15vh;
+}
+.image,.back{
+    background-size: 100% 100%;
+    border-radius: 4vh;
+    box-shadow: 2px 2px 10px black;
+    width: 600px;
+    height: 50vh;
+    position: absolute;
+    top: 2vh;
+    display: none;
+}
+.image{
+    background-image: url(./hand1.jpg);
+}
+.back{
+    /* background-image: linear-gradient(180deg,#D7816A ,#BD4F6C); */
+    background-image: url(./myn.jpg);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card1:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+p{
+    color: aliceblue;
+    font-style: italic;
+    font-size: 2vh;
+}
+#myName{
+    position: fixed;
+    bottom: 5vh;
+    right: 0px;
+    font-size: 3vh;
+}
